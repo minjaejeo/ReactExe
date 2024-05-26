@@ -1,10 +1,9 @@
-import './Child.css';
+import "./Child.css";
 
-function Child() {
+function Child(){
   const name = "리액트";
 
-
-  return <div className="react">{name}</div>;
+  return <div className="react">{name}</div>
 }
 
 export default Child;

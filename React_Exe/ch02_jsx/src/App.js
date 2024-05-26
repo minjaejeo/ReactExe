@@ -26,22 +26,23 @@ function App() {
   //   </div>
   // );
 
-  // return (
+  // return(
   //   <Fragment>
   //     <h1>리액트 안녕</h1>
   //     <h2>잘 동작하니?</h2>
-  //     <h2>감사합니다.</h2>
+  //     <h2>감사합니다.!</h2>
   //   </Fragment>
   // );
 
-  return (
+  return(
     <>
       <h1>리액트 안녕</h1>
       <h2>잘 동작하니?</h2>
-      <h2>감사합니다.</h2>
+      <h2>감사합니다</h2>
       <h2>행복합니다.</h2>
     </>
-  );
+  )
+
 }
 
 export default App;

@@ -1,16 +1,14 @@
-function Child() {
+function Child(){
   const name = "리액트";
 
-  const style ={
-    backgroundColor: "black", // background-color
+  const style = {
+    backgroundColor: "black",
     color: "aqua",
-    fontSize: "48px", // font-size
+    fontSize: "48px",
     fontWeight: "bold",
-    padding: 16
-    
-  }
-
-  return <div style={style}>{name}</div>;
+    padding: 16,
+  };
+  return <div style={style}>{name}</div>
 }
 
 export default Child;
