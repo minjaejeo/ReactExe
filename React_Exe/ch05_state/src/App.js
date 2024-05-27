@@ -10,8 +10,10 @@ import Say from './ex07_function_multistate/Say';
 
 function App() {
   return (
+    // <Counter />
 
     <Say />
+
   );
 }
 
