@@ -11,6 +11,7 @@ const Say = () => {
 
     return(
         <div>
+
             {/* html에서의 onclick이 아니라 Camel Case로 이벤트를 표시 */}
             <button onClick={onClickEnter}>입장</button>
             <button onClick={onClickLeave}>퇴장</button>

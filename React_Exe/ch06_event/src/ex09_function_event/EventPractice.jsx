@@ -1,8 +1,9 @@
+import { Component } from "react";
 import { useState } from "react";
 
 const EventPractice = () => {
 
-    // [변수명, setter함수] = userState(초기값)
+    // [변수명, setter 함수] = useState(초기값)
     const [username, setUsername] = useState('');
     const [message, setMessage] = useState('');
 
@@ -19,16 +20,24 @@ const EventPractice = () => {
             onClick();
     }
 
-    return(
-        <div>
-            <h1>이벤트 연습</h1>
-            <input type="text" name="username" placeholder="사용자명"
-                value={username} onChange={onChangeUsername}/>
-            <input type="text" name="message" placeholder="아무거나 입력해 보세요"
-                value={message} onChange={onChangeMessage} onKeyDown={onKeyDown}/> 
-            <button onClick={onClick}>확인</button>
-        </div>
-    )
+
+        return (
+            <div>
+                <h1>이벤트 연습</h1>
+                {/* username과 message의 변화값 모두 this.handleChange에 전달됨*/}
+                <input type="text" name="username"
+                    placeholder="사용자명"
+                    value={username}
+                    onChange={onChangeUsername}/>
+                <input type="text" name="message"
+                    placeholder="아무거나 입력해 보세요"
+                    value={message}
+                    onChange={onChangeMessage}
+                    onKeyDown={onKeyDown}/>
+                    <button onClick={onClick}>확인</button>
+            </div>
+        );
+    
 }
 
 export default EventPractice;
