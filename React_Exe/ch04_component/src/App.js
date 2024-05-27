@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+
 // import MyComponent from './ex06_default_props copy/MyComponent';
 // import Child from './ex01_function/Child';
 // import Child from './ex02_class/Child';
@@ -24,21 +25,24 @@ import CommentList from './ex20_comment/CommentList';
 
 function App() {
   return (
-    // <Library title='조선 선비들의 '/>
-  // <>
-  // <MyComponent />
-  // <MyComponent name="리액트" />
-  // </>
-  // <MyComponent name="Happy Happy">리액트 프로그래밍</MyComponent>
+    // <Library title="조선 선비들의" />
+    // <>
+    //   <MyComponent />
+    //   <MyComponent name="전민재" />
+    //   <MyComponent name="전민재">리액트 프로그래밍</MyComponent>
 
-  // <MyComponent name="행운">리액트</MyComponent>
-  // <MyComponent name={3}>리액트</MyComponent>
-
-  // <MyComponent name="React_Programming">리액트</MyComponent>
-  // <MyComponent name="리액트_뷰_앵귤러_노드_넥스트" favoriteNumber={3}>리액트</MyComponent>
-
-  // <Team title="재능 기부 교류 서비스"/>
-  <CommentList/>
+    // </>
+    // <MyComponent name="Happy Happy">리액트 프로그래밍</MyComponent>
+    // <MyComponent name="행운">리액트</MyComponent>
+    // <MyComponent name={3}>리액트</MyComponent>
+    // <MyComponent name="React_Programming">리액트가 아니라 children입니다..다다ㅏ</MyComponent>
+    // <MyComponent name="전민재라고라고라파덕" favoriteNumber={10000000000}>나는 자식이다 그러니까 porps.children의 자식이다.
+    // 나를 무시하지 마라.내가 왕이될 상인가</MyComponent>
+    <>
+      <CommentList />
+      <CommentList />
+    </>
+    
   );
 }
 

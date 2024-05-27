@@ -1,5 +1,6 @@
-function Comment(props){
 
+
+function Comment(props){
     function formatDate(date){
         <div>날짜: {date}</div>
     }
@@ -10,16 +11,14 @@ function Comment(props){
                 <div className="user-info-name">{props.author.name}</div>
             </div>
             <div className="comment-text">
-            {props.text}
-            
-        </div>
+                {props.text}
+            </div>
 
-        <div className="comment-date">
-            {formatDate(props.date)}
-        </div>
-        </div>
+            <div className="comment-date">
+                {formatDate(props.date)}
+            </div>
 
-        
+        </div>
     )
 }
 

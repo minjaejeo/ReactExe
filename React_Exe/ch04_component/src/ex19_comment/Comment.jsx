@@ -1,7 +1,7 @@
 
 const styles = {
     wrapper: {
-        margin: 8,
+        margin: 8, 
         padding: 8,
         display: "flex",
         flexDirection: "row",
@@ -22,10 +22,10 @@ const styles = {
     },
     nameText: {
         color: "black",
-        fontSize: 16, 
+        fontSize: 16,
         fontWeight: "bold",
     },
-    commentText: {
+    commentText:{
         color: "black",
         fontSize: 16,
     },

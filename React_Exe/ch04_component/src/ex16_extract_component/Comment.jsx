@@ -1,3 +1,4 @@
+
 function Avatar(props){
     return(
         <img className="avatar" src={props.user.avatarUrl} alt={props.user.name}/>
@@ -5,17 +6,15 @@ function Avatar(props){
 }
 
 function UserInfo(props){
-    return (
+    return(
         <div className="user-info">
-                <Avatar user={props.user}/>
-                <div className="user-info-name">{props.user.name}</div>
-            </div>
+            <Avatar user={props.user}/>
+            <div className="user-info-name">{props.user.name}</div>
+        </div>
     )
 }
 
-
 function Comment(props){
-
     function formatDate(date){
         <div>날짜: {date}</div>
     }
@@ -23,7 +22,7 @@ function Comment(props){
         <div className="comment">
 
             <UserInfo user={props.author}/>
-            
+
             <div className="comment-text">
                 {props.text}
             </div>
@@ -31,9 +30,8 @@ function Comment(props){
             <div className="comment-date">
                 {formatDate(props.date)}
             </div>
-        </div>
 
-        
+        </div>
     )
 }
 

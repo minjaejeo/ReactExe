@@ -1,3 +1,4 @@
+
 function Avatar(props){
     return(
         <img className="avatar" src={props.user.avatarUrl} alt={props.user.name}/>
@@ -5,13 +6,14 @@ function Avatar(props){
 }
 
 function UserInfo(props){
-    return (
+    return(
         <div className="user-info">
-                <Avatar user={props.user}/>
-                <div className="user-info-name">{props.user.name}</div>
-            </div>
+            <Avatar user={props.user}/>
+            <div className="user-info-name">{props.user.name}</div>
+        </div>
     )
 }
+
 
 function CommentText(props){
     return(
@@ -25,33 +27,27 @@ function CommentDate(props){
     function formatDate(date){
         <div>날짜: {date}</div>
     }
-
+    
     return(
         <div className="comment-date">
-                {formatDate(props.date)}
+            {formatDate(props.date)}
         </div>
     )
-
 }
 
 // 컴포넌트 추출
 
-
 function Comment(props){
-
     return(
         <div className="comment">
 
             <UserInfo user={props.author}/>
-                
 
-            <CommentText text={props.text}></CommentText>
+            <CommentText text={props.text}/>
 
-            <CommentDate date={props.date}></CommentDate>
-                
+            <CommentDate date={props.date}/>
+            
         </div>
-
-        
     )
 }
 
