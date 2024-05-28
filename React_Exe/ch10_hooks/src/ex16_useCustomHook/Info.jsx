@@ -1,4 +1,4 @@
-import React from "react";
+
 import useInputs from "./useInputs";
 
 const Info = () => {
@@ -6,7 +6,7 @@ const Info = () => {
         name: '',
         nickname: ''
     });
-    const { name, nickname} = state;
+    const { name, nickname } = state;
 
     return(
         <div>
@@ -16,14 +16,14 @@ const Info = () => {
             </div>
             <div>
                 <div>
-                    <b>이름: </b>{name}
+                    <b>이름: </b> {name}
                 </div>
                 <div>
-                    <b>닉네임: </b>{nickname}
+                    <b>닉네임: </b> {nickname}
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Info;

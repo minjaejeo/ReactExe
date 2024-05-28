@@ -6,29 +6,30 @@ import { useState, useEffect } from "react";
 
 [클래스]
 componentDidMount(마운트)
-componentDidUpdate(업데이트)    
+componentDidUpdate(업데이트)
 componentWillUnmount(언마운트)
 
 [함수]
-useEffect(() => { });   업데이트시마다 등록된 함수가 매번 호출된다.
-useEffect(() => { }, [ ]); 마운트시 1번만 호출된다.
-useEffect(() => { }, [ name ]); name state가 변화되었을 때 호출된다.
-useEffect(() => { 
+useEffect(() => { });   업테이트시마다 등록된 함수가 매번 호출된다.
+useEffect(() => { }, []); 마운트시 1번만 호출된다.
+useEffect(() => {}, [name]); name state가 변화되었을 때 호출된다.
+useEffect(() => {
     name state가 변화되었을 때 호출되는 부분
     return() => {
-        업데이트 직전/언마운트 되기 전
+        업데이트 직전/ 언마운트 되기 전
     };
-}, [ name ]);
+}, [name]);
 */
+
 
 const Info = () => {
     const [name, setName] = useState('');
-    const[nickname, setNickname] = useState('');
+    const [nickname, setNickname] = useState('');
 
     useEffect(() => {
         console.log('렌더링이 완료되었습니다!');
         console.log({
-            name,
+            name, 
             nickname
         });
     });
@@ -39,6 +40,7 @@ const Info = () => {
     const onChangeNickname = e => {
         setNickname(e.target.value);
     }
+
     return(
         <div>
             <div>
@@ -47,10 +49,10 @@ const Info = () => {
             </div>
             <div>
                 <div>
-                    <b>이름: </b> {name}
+                    <b>이름: </b>{name}
                 </div>
                 <div>
-                    <b>닉네임: </b> {nickname}
+                    <b>닉네임: </b>{nickname}
                 </div>
             </div>
         </div>

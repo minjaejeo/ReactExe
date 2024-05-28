@@ -1,4 +1,4 @@
-import React from "react";
+
 import useInputs from "./useInputs";
 
 const Spec = () => {
@@ -7,7 +7,7 @@ const Spec = () => {
         eng: '',
         math: ''
     });
-    const { kor, eng, math} = state;
+    const { kor, eng, math } = state;
 
     return(
         <div>
@@ -18,17 +18,17 @@ const Spec = () => {
             </div>
             <div>
                 <div>
-                    <b>국어: </b>{kor}
+                    <b>국어: </b> {kor}
                 </div>
                 <div>
-                    <b>영어: </b>{eng}
+                    <b>영어: </b> {eng}
                 </div>
                 <div>
-                    <b>수학: </b>{math}
+                    <b>수학: </b> {math}
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Spec;

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Info = () => {
     const [name, setName] = useState('');
-    const[nickname, setNickname] = useState('');
+    const [nickname, setNickname] = useState('');
 
     const onChangeName = e => {
         setName(e.target.value);
@@ -18,10 +18,10 @@ const Info = () => {
             </div>
             <div>
                 <div>
-                    <b>이름: </b> {name}
+                    <b>이름: </b>{name}
                 </div>
                 <div>
-                    <b>닉네임: </b> {nickname}
+                    <b>닉네임: </b>{nickname}
                 </div>
             </div>
         </div>

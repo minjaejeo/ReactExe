@@ -24,12 +24,13 @@ import ClassRoom from './ex17_useCustomHook/ClassRoom';
 
 function App() {
   // return (
-  //   // <Counter />
-  //     <Info />
+    // <Counter />
+      // <Info />
   // );
   // return <ParentInfo />;
 // return <Counter />;
 // return <Info/>;
+// return <Average />;
 // return (
 //   <>
 //     <Info/>

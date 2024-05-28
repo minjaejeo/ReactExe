@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
- 
+
+import React, { useRef } from "react";
+
 const RefSample = () => {
   const id = useRef(1);
   const setId = (n) => {
@@ -8,11 +9,11 @@ const RefSample = () => {
   const printId = () => {
     console.log(id.current);
   }
-  return (
+  return(
     <div>
-      refsample
+      RefSample
     </div>
   );
 };
- 
+
 export default RefSample;

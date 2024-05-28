@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useState, useEffect, useReducer } from "react";
 
 function reducer(state, action){
     return{
@@ -7,15 +7,16 @@ function reducer(state, action){
     };
 }
 
-const Info =() => {
+
+const Info = () => {
     const [state, dispatch] = useReducer(reducer, {
-        name : '',
-        nickname : ''
+        name: '',
+        nickname: ''
     });
     const {name, nickname} = state;
-    const onChange = e => {
+    const onChange =e => {
         dispatch(e.target);
-    };
+    }
 
     return(
         <div>
@@ -34,5 +35,4 @@ const Info =() => {
         </div>
     )
 }
-
 export default Info;

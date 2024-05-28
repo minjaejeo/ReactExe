@@ -1,10 +1,11 @@
+
 import { useState } from "react";
 import Info from "./info";
 
 const ParentInfo = () => {
     const [visible, setVisible] = useState(false);
 
-    return ( 
+    return(
         <div>
             <button onClick={() => {
                 setVisible(!visible);
@@ -14,7 +15,7 @@ const ParentInfo = () => {
             <hr/>
             {visible && <Info/>}
         </div>
-        
     )
 }
+
 export default ParentInfo;
