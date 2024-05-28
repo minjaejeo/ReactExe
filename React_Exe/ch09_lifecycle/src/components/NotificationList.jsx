@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import Notification from "./Notification";
+import React, {Component} from 'react';
+import Notification from './Notification';
 
 const reservedNotifications = [
     {
@@ -8,19 +8,17 @@ const reservedNotifications = [
     },
     {
         id: 2,
-        message: "점심 식사 시간입니다."
+        message : "점심 식사 시간입니다."
     },
     {
         id: 3,
-        message: "이제 곧 미팅이 시작됩니다."
+        message : "이제 곧 미팅이 시작됩니다."
     }
 ]
 
 let timer;
 
-
 class NotificationList extends Component{
-
     constructor(props){
         super(props);
 
@@ -34,14 +32,14 @@ class NotificationList extends Component{
         // 컴포넌트가 시작되면 timer가 1초단위로 반복한다.
         // 1초에 1번씩 reservedNotifications에 있는 데이터를 notifications에 저장한다.
         // 모두 저장했으면 timer를 종료
-        timer = setInterval(() => {
+        timer = setInterval(()=>{
             if(notifications.length < reservedNotifications.length){
                 const index = notifications.length;
                 notifications.push(reservedNotifications[index]);
+                console.log(notifications);
                 this.setState({
                     notifications : notifications
                 });
-
             }else{
                 this.setState({
                     notifications : []
@@ -59,14 +57,15 @@ class NotificationList extends Component{
     render(){
         return (
             <div>
-                {this.state.notifications.map((notification) => {
+                {this.state.notifications.map((notifacation) => {
                     return <Notification 
-                    key={notification.id}
-                    id={notification.id}
-                    message={notification.message}/>
+                                    key={notifacation.id}
+                                    id={notifacation.id}                            
+                                    message={notifacation.message}/>
                 })}
             </div>
         )
     }
 }
+
 export default NotificationList;

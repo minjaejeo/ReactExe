@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 
 const styles = {
     wrapper: {
@@ -7,16 +7,15 @@ const styles = {
         display: "flex",
         flexDirection: "row",
         border: "1px solid grey",
-        borderRadius : 16,
+        borderRadius: 16,
     },
-    messageText:{
+    messageText : {
         color: "black",
         fontSize: 16,
     }
 }
 
 class Notification extends Component{
-
     constructor(props){
         super(props);
 
