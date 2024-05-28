@@ -7,29 +7,27 @@ import './App.css';
 import ScrollBox from './ex05_component_ref/ScrollBox';
 import { Component } from 'react';
 
+
 // function App(){
-//   return <ValidationSample/>;
+//   return <ValidationSample />
 // }
 
 /*
-ref는 html 엘리먼트를 가리킬 때 사용하고, 
-  우리가 만든 컴포넌트를 가리킬 때도 사용한다.
+ref는 html 엘리먼트를 가리킬 때 사용하고,
+우리가 만든 컴포넌트를 가리킬 때도 사용한다.
 */
 
 class App extends Component {
   render(){
-      return (
-    <div>
-      <ScrollBox ref={(ref) => this.ScrollBox=ref}/>
-      <button onClick={() => this.ScrollBox.scrollToBottom()}>
-        맨 밑으로
-      </button>
-
-    </div>
-
-  );
+    return(
+      <div>
+        <ScrollBox ref={(ref) => (this.ScrollBox = ref)}/>
+        <button onClick={() => this.ScrollBox.scrollToBottom()}>
+          맨 밑으로
+        </button>
+      </div>
+    )
   }
-
 }
 
 export default App;
