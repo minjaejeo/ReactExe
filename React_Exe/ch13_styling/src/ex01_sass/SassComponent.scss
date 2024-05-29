@@ -1,7 +1,7 @@
 $red: #fa5252;
-$orange: #fd7e14;
+$orange: #fd7314;
 $yellow: #fcc419;
-$green: #40c057;
+$green: #339af0;
 $blue: #339af0;
 $indigo: #5c7cfa;
 $violet: #7950f2;
@@ -30,24 +30,21 @@ $violet: #7950f2;
             background: $yellow;
             @include square(3);
         }
-        &.green{
-            background: $green;
-            @include square(4);
-        }
         &.blue{
             background: $blue;
             @include square(5);
         }
         &.indigo{
-        background: $indigo;
-        @include square(6);
+            background: $indigo;
+            @include square(6);
         }
         &.violet{
-        background: $violet;
-        @include square(7);
+            background: $violet;
+            @include square(7);
         }
         &:hover{
             background: black;
         }
+
     }
 }
