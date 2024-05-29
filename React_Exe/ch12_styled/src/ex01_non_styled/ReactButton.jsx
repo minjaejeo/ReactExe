@@ -1,6 +1,6 @@
 
 const ReactButton = (props) => {
-    const style = {
+    const style ={
         color: 'white',
         backgroundColor: 'purple'
     }

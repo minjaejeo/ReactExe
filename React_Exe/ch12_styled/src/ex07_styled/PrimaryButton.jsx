@@ -5,13 +5,13 @@ const PrimaryButton = styled.button`
     color: ${function(props){
         if(props.primary)
             return 'white';
-        else 
+        else
             return 'black';
     }};
     background-color: ${function(props){
         if(props.primary)
             return 'black';
-        else 
+        else
             return 'white';
     }};
 `;

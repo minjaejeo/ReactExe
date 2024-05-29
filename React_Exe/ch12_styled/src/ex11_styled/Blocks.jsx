@@ -1,8 +1,9 @@
+
 import styled from "styled-components";
 import Wrapper from "./Wrapper";
 import Block from "./Block";
 
-const blockItems =[
+const blockItems = [
     {
         label: '1',
         padding: '1rem',
@@ -18,16 +19,16 @@ const blockItems =[
         padding: '3rem',
         backgroundColor: 'blue'
     },
+
 ];
 
 const Blocks = (props) => {
-    return (
+    return(
         <Wrapper {...props}>
             {blockItems.map((blockItem) => {
-                return (
+                return(
                     <Block padding={blockItem.padding}
-                            backgroundColor={blockItem.backgroundColor}
-                            >
+                            backgroundColor={blockItem.backgroundColor}>
                                 {blockItem.label}
                             </Block>
                 );
