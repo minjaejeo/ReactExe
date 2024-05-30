@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import MiniBlogApp from './ex07_comment_list/MiniBlogApp';
+import MainApp from "./ex04_action/MainApp";
 
 function App() {
   return (
-    <MiniBlogApp />
+    <MainApp />
   );
 }
 
