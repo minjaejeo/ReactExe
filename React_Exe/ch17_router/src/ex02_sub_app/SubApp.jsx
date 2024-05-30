@@ -1,6 +1,7 @@
-import Home from './Home';
-import Topics from './Topics';
-import Contact from './Contact';
+
+import Home from "./Home";
+import Topics from "./Topics";
+import Contact from "./Contact";
 
 
 function SubApp(){

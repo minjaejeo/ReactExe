@@ -1,5 +1,4 @@
-
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"; 
 
 function Topic({contents}){
     // 현재 컴포넌트가 라우팅된 변수값을 얻을 수 있다
@@ -17,12 +16,10 @@ function Topic({contents}){
     }
     return(
         <div>
-            <h3> {selected_topic.title}</h3>
+            <h3>{selected_topic.title}</h3>
             {selected_topic.description}
         </div>
-    )
-    console.log(params);
-    return null;
+    );
 }
 
 export default Topic;
