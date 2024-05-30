@@ -1,10 +1,10 @@
-import FancyBorder from "./FancyBorder"
 
+import FancyBorder from "./FancyBorder"
 
 // 일반적인 Dialog
 export default function Dialog(props){
-    return (
-        <FancyBorder color="blue">
+    return(
+        <FancyBorder color='blue'>
             <h1 className="Dialog-title">
                 {props.title}
             </h1>
