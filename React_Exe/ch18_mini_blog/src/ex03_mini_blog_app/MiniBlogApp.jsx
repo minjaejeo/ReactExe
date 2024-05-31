@@ -1,7 +1,7 @@
-import React from "react";
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import styled from "styled-components";
 
+import React from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import styled from 'styled-components';
 
 const MainTitleText = styled.p`
     font-size: 24px;
@@ -10,15 +10,14 @@ const MainTitleText = styled.p`
 `;
 
 function MiniBlogApp(props){
-
     return(
         <BrowserRouter>
-            <MainTitleText>나의 미니 블로그</MainTitleText>
+            <MainTitleText>나이 미니 블로그</MainTitleText>
             <Routes>
                 {/* index === path='/' */}
                 <Route index element={null}/>
-                <Route path="post-writer" element={null}/>
-                <Route path="post/:postId" element={null} />
+                <Route path="post-write" element={null}/>
+                <Route path="post/:postId" element={null}/>
             </Routes>
         </BrowserRouter>
     )
