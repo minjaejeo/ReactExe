@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
     width: calc(100% - 32px);
@@ -20,12 +20,12 @@ const Wrapper = styled.div`
 const ContentText = styled.p`
     font-size: 16px;
     white-space: pre-wrap;
-
 `;
 
 function CommentListItem(props){
     const { comment } = props;
-    return (
+
+    return(
         <Wrapper>
             <ContentText>{comment.content}</ContentText>
         </Wrapper>

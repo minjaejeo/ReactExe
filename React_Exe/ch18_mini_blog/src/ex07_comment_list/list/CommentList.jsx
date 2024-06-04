@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CommnetListItem from './CommentListItem';
-import CommentListItem from "./CommentListItem";
+import CommentListItem from './CommentListItem';
 
 const Wrapper = styled.div`
     display: flex;
@@ -10,17 +9,16 @@ const Wrapper = styled.div`
     justify-content: center;
 
     :not(:last-child){
-        margin-botton: 16px;
+        margin-bottom: 16px;
     }
 `;
 
 function CommentList(props){
-    const {comments} = props;
-    
+    const { comments } = props;
 
-    return (
+    return(
         <Wrapper>
-            {comments.map((comment, index)=>{
+            {comments.map((comment, index) => {
                 return(
                     <CommentListItem key={comment.id} comment={comment}/>
                 )
