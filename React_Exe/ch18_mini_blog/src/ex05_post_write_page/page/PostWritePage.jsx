@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import TextInput from "../ui/TextInput";
+import TextInput from '../ui/TextInput';
 import Button from '../ui/Button';
 
 const Wrapper = styled.div`
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
 const Container = styled.div`
     width: 100%;
     max-width: 720px;
-
+    
     :not(:last-child){
         margin-bottom: 16px;
     }
@@ -26,8 +27,8 @@ function PostWritePage(props){
 
     const navigate = useNavigate();
 
-    const [ title, setTitle ] = useState('');
-    const [ content, setContent] = useState('');
+    const[title, setTitle] = useState('');
+    const[content, setContent] = useState('');
 
     return(
         <Wrapper>
@@ -35,12 +36,13 @@ function PostWritePage(props){
                 <TextInput height={20} value={title} onChange={(event) => {
                     setTitle(event.target.value);
                 }} />
-                <TextInput height={480} value={content} onChange={(event)=>{
+                <TextInput height={480} value={content} onChange={(event) => {
                     setContent(event.target.value);
-                }}/>
-                <Button title='글 작석하기' onClick={() => {
-                    navigate("/");
                 }} />
+                <Button title='글 작성하기' onClick={()=>{
+                    navigate("/");
+                }}/>
+                
             </Container>
         </Wrapper>
     )

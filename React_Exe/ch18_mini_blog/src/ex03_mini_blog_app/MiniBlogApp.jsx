@@ -1,9 +1,8 @@
-
 import React from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import styled from 'styled-components';
 
-const MainTitleText = styled.p`
+const MainTitleText= styled.p`
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -12,7 +11,7 @@ const MainTitleText = styled.p`
 function MiniBlogApp(props){
     return(
         <BrowserRouter>
-            <MainTitleText>나이 미니 블로그</MainTitleText>
+            <MainTitleText>나의 미니 블로그</MainTitleText>
             <Routes>
                 {/* index === path='/' */}
                 <Route index element={null}/>
@@ -22,5 +21,4 @@ function MiniBlogApp(props){
         </BrowserRouter>
     )
 }
-
 export default MiniBlogApp;
