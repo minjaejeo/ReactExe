@@ -28,9 +28,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         Optional<User> user = userRepository.findByUsername(username);
 
         UserBuilder builder = null;
-
         // User테이블에 username이 존재한다.
-        if(user.isPresent()){
+        if(user.isPresent()) {
             // username, password, role를 builder에 전달
             User currentUser = user.get();
             builder = org.springframework.security.core.userdetails.User.withUsername(username);
