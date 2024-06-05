@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import MainApp from './ex06_provider/MainApp';
+import MainApp from './ex05_use_context/MainApp';
 
 function App() {
   return <MainApp />;

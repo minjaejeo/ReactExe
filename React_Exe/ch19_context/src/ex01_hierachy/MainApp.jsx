@@ -1,36 +1,35 @@
+
 import './style.css';
 
 function MainApp(){
-    return (
+    return(
         <div className='root'>
             <h1>Hello World</h1>
-            <Sub1 />
+            <Sub1/>
         </div>
     );
 }
 function Sub1(){
-    return (
+    return(
         <div>
             <h1>Sub1</h1>
-            <Sub2 />
+            <Sub2/>
         </div>
     )
 }
 function Sub2(){
-    return (
+    return(
         <div>
             <h1>Sub2</h1>
-            <Sub3 />
+            <Sub3/>
         </div>
     )
 }
 function Sub3(){
-    return (
+    return(
         <div>
             <h1>Sub3</h1>
         </div>
     )
 }
-
-
 export default MainApp;
