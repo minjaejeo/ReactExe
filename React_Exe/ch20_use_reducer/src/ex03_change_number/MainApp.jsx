@@ -1,6 +1,6 @@
+
 import React, {useState} from "react";
 import { useReducer } from "react";
-
 
 function MainApp(){
     const countReducer = (oldCount, action) => {
@@ -11,8 +11,8 @@ function MainApp(){
         else if(action === 'RESET')
             return 0;
     }
-    const [ count, countDispatch ] = useReducer(countReducer, 0);
 
+    const [count, countDispatch] = useReducer(countReducer, 0);
     const down = () => countDispatch('DOWN');
     const reset = () => countDispatch('RESET');
     const up = () => countDispatch('UP');
@@ -24,9 +24,9 @@ function MainApp(){
 
     return(
         <div>
-            <input type="button" value='-' onClick={down}/>
-            <input type="button" value='0' onClick={reset}/>
-            <input type="button" value='+' onClick={up}/>
+            <input type="button" value='-' onClick={down} />
+            <input type="button" value='0' onClick={reset} />
+            <input type="button" value='+' onClick={up} />
             <input type="text" value={number} onChange={changeNumber}/>
             <span>{count}</span>
         </div>
