@@ -1,7 +1,6 @@
 package org.mind.carddatabase.domain;
 
 import lombok.*;
-import org.hibernate.annotations.Columns;
 
 import javax.persistence.*;
 

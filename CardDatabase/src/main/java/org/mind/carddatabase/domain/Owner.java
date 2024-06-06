@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "cars")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@JsonIgnoreProperties({"hiberateLazyInitializer", "handler"})
 public class Owner {
 
     @Id
@@ -26,7 +26,7 @@ public class Owner {
 
     /*
     Car를 조회하면서, 다시 연결된 OwnerId를 통해 부모를 조회하는
-    무한반복에 빠지므로 Owner요청시 cars는 json으로 보내지 않는 걸로...
+    무한 반복에 빠지므로 Owner 요청 시 cars는 json으로 보내지 않는 걸로...
      */
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")

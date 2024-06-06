@@ -1,5 +1,6 @@
 package org.mind.carddatabase.domain;
 
+
 import lombok.*;
 
 import javax.persistence.*;

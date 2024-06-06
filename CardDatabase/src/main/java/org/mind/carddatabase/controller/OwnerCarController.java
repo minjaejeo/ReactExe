@@ -21,7 +21,6 @@ public class OwnerCarController {
     public List<Owner> getAllOwners(){
         return ownerRepository.findAll();
     }
-
     @RequestMapping("/cars")
     public List<Car> getAllCars(){
         return carRepository.findAll();
