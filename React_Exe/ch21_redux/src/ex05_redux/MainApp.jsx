@@ -13,12 +13,12 @@ function MainApp(){
             <h1>Root</h1>
             <div id='grid'>
                 {/* 아래 영역에서 numberStore를 통해 변수/객체/함수 공유할 수 있어
-                이벤트 전달할 수 있어 */}
+                이벤트 전달할 수 있어  */}
                 <Provider store={numberStore}>
                     <Left1  />
                     <Right1 />
                 </Provider>
-
+                
             </div>
             
         </div>

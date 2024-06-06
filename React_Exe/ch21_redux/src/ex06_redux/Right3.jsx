@@ -7,8 +7,7 @@ function Right3(props){
         <div>
             <h1>Right3 </h1>
             <input type='button' value='+' 
-            onClick={() => dispatch({type: 'PLUS'})} 
-            />
+            onClick={() => dispatch({type:'PLUS'})}/>
         </div>
     )
 }
