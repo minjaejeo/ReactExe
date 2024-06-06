@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice, configureStore} from '@reduxjs/toolkit';
 
 const strSlice = createSlice({
     name: 'strSlice',
-    initialState: {value:''},
+    initialState: {value: ''},
     reducers:{
         append:(state, action) => {
             state.value = state.value + action.ch;
