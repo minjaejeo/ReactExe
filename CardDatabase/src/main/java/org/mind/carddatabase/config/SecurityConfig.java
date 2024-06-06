@@ -1,5 +1,6 @@
 package org.mind.carddatabase.config;
 
+
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.mind.carddatabase.component.AuthEntryPoint;
@@ -28,11 +29,11 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import javax.servlet.annotation.WebFilter;
 import java.util.Arrays;
 
+
 /*
 spring security설정을 하게 되면
 직접 서버의 주소로 접근하려고 하면 무조건, login화면으로 이동한다
 user 사용자
-
 CONSOLE창에 아래와 같이 출력된다.
 Using generated security password: 6c109eeb-c5a1-4a83-b9c9-f35b03171b40
 */
@@ -55,7 +56,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final AuthenticationFilter authenticationFilter;
     private final AuthEntryPoint authEntryPoint;
 
-
     // 사용자인증을 위한 userDetailsService 설정/패스워드 암호화 알고리즘 설정
     // 암호를 DB에 저장하기 전에 BCrypt 암호화 처리
     @Autowired
@@ -72,18 +72,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     // 보안설정/주소 권한 허용 설정
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity http) throws Exception{
         // 어떤 요청이든 Security에 의해 검사하지 않고 모두 허용
-//        http.csrf().disable()
-//                .cors().and()
-//                .authorizeRequests().anyRequest().permitAll();
-
-        // csrf보안은 세션을 활용하는데 Rest서버는 세션을 사용하지 않으므로 disable
         http.csrf().disable()
+                .cors().and()
+                .authorizeRequests().anyRequest().permitAll();
+
+                /*
                 // CORS는 설정을 사용한다.
                 .cors().and()
                 .sessionManagement()
-                // Rest 서버는 세션 상태를 유지하지 않으므로 STATELESS
+                //Rest 서버는 세션 상태를 유지하지않으므로 STATELESS
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
                 // /login엔드포인트에 대한 POST요청은 접근을 허용함.
@@ -94,16 +93,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling()
                 .authenticationEntryPoint(authEntryPoint).and()
                 // /login을 제외한 나머지 모든 요청은 필터를 통과해야 정상 응답을 받을 수 있다.
-                .addFilterBefore(authenticationFilter,
-                        UsernamePasswordAuthenticationFilter.class);
-    }
+                .addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
+                 */
+
+    }
     // CORS 자세한 설정 부분
     @Bean
-    CorsConfigurationSource corsConfigurationSource() {
+    CorsConfigurationSource corsConfigurationSource(){
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        //config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://www.bitcamp.co.kr"));
+        // config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://www.bitcamp.co.kr"));
         config.setAllowedOrigins(Arrays.asList("*"));
         config.setAllowedMethods(Arrays.asList("*"));
         config.setAllowedHeaders(Arrays.asList("*"));

@@ -1,5 +1,6 @@
 package org.mind.carddatabase.service;
 
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.mind.carddatabase.domain.User;
@@ -9,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.User.UserBuilder;
-
 import java.util.Optional;
 
 @Log4j2
@@ -19,9 +19,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    // AuthenticationManager의 인증과정에서 호출되어 진다.
+    // AuthenticationManager의 인증과정에서 호출되어진다.
     // 이곳에서는 테이블의 사용자가 있는지를 확인하고,
-    // 사용자id, password, role을 넣어줘야 한다.
+    // 사용자id, password, role을 넣어줘야한다.
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         log.info("loadUserByUsername-" + username);
@@ -29,7 +30,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         UserBuilder builder = null;
         // User테이블에 username이 존재한다.
-        if(user.isPresent()) {
+        if(user.isPresent()){
             // username, password, role를 builder에 전달
             User currentUser = user.get();
             builder = org.springframework.security.core.userdetails.User.withUsername(username);
@@ -39,5 +40,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("User not found : " + username);
         }
         return builder.build();
+
     }
 }
