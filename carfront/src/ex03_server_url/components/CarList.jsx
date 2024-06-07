@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from "react";
 import { SERVER_URL } from './constants';
 
 function CarList(){
@@ -13,12 +13,13 @@ function CarList(){
         .catch(err=> console.error(err));
     }, []);
 
+
     return(
         <div>
             <table>
                 <tbody>
                     {
-                        cars.map((car, index) => 
+                        cars.map((car, index)=> 
                             <tr key={index}>
                                 <td>{car.brand}</td>
                                 <td>{car.model}</td>
