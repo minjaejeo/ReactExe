@@ -34,12 +34,12 @@ function Login(){
         })
         .catch(err => console.error(err));
     }
-
-    const logout = ()=> {
+    
+    const logout = () => {
         sessionStorage.removeItem("jwt");
         setAuth(false);
     }
-    
+
     if(isAuthenticated)
         return <CarList />
     else{
@@ -52,10 +52,10 @@ function Login(){
             </Stack>
             <Snackbar
                 open={open}
-                autoHideDuration={3000}
-                onClose={()=> setOpen(false)}
+                authoHideDuration={3000}
+                onClose={() => setOpen(false)}
                 message="Login failed: Check your username and password"
-            />
+                />
         </div>
     )
     }

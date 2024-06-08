@@ -1,6 +1,5 @@
 package org.mind.carddatabase;
 
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.mind.carddatabase.domain.Car;
@@ -20,14 +19,14 @@ import java.util.Arrays;
 @RequiredArgsConstructor
 public class CardDatabaseApplication implements CommandLineRunner {
 
-
 	private final OwnerRepository ownerRepository;
-	private final CarRepository carRepository;
+	private final CarRepository	carRepository;
 	private final UserRepository userRepository;
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
+
 		SpringApplication.run(CardDatabaseApplication.class, args);
-		log.info("CarDatabase Application started............");
+		log.info("CardDatabase Application started.............");
 	}
 
 	@Override
@@ -43,8 +42,6 @@ public class CardDatabaseApplication implements CommandLineRunner {
 				.build();
 		ownerRepository.saveAll(Arrays.asList(owner1, owner2));
 
-
-
 		for(int i=0;i<3;i++){
 			Car car1 = Car.builder()
 					.brand("Ford")
@@ -56,7 +53,7 @@ public class CardDatabaseApplication implements CommandLineRunner {
 					.owner(owner1)
 					.build();
 			Car car2 = Car.builder()
-					.brand("Hyundaii")
+					.brand("Hyndai")
 					.model("Genesis")
 					.color("black")
 					.registerNumber("HHH-111")
@@ -76,16 +73,16 @@ public class CardDatabaseApplication implements CommandLineRunner {
 			carRepository.saveAll(Arrays.asList(car1, car2, car3));
 		}
 
-		for(Owner owner : ownerRepository.findAll()){
+		for(Owner owner : ownerRepository.findAll()) {
 			log.info(owner.toString());
-
 		}
 		for(Car car : carRepository.findAll()){
 			log.info(car.toString());
 		}
 
 		// username=user / password=user
-		User user1 = User.builder().username("user")
+		User user1 = User.builder()
+				.username("user")
 				.password("$2y$10$OwyMOTgTPKQal6nFt0JWG.sOCDJq5PN.QRr8BSjrvkR7lVu2SLinW")
 				.role("USER")
 				.build();
@@ -99,9 +96,5 @@ public class CardDatabaseApplication implements CommandLineRunner {
 
 		userRepository.save(user1);
 		userRepository.save(user2);
-
-
-
-
 	}
 }

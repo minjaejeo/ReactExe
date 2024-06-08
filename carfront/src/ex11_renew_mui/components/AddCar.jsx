@@ -34,8 +34,7 @@ function AddCar(props){
     }
     return(
         <div>
-            {/* <button onClick={handleClickOpen}>New Car</button> */}
-            <Button variant="contained" onClick={handleClickOpen}>New Car</Button>
+            <button onClick={handleClickOpen}>New Car</button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Edit Car</DialogTitle>
                 <DialogContent>
@@ -49,7 +48,7 @@ function AddCar(props){
                         <TextField label="Year" name="year" 
                             variant="standard" value={car.year} onChange={handleChange}/>
                         <TextField label="Price" name="price" 
-                            variant="standard" value={car.price} onChange={handleChange}/>
+                            variant="standard" value={car.price} onChange={handleChange}/> 
                         {/* <input placeholder="Brand" name="brand"
                             value={car.brand} onChange={handleChange}/>
                         <br />

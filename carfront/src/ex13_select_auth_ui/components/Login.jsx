@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from "react";
 import { SERVER_URL } from './constants';
 import { Button, TextField, Stack } from '@mui/material';
 import CarList from './CarList';
@@ -13,7 +13,7 @@ function Login(){
     const handleChange = (event) => {
         setUser({...user, [event.target.name]: event.target.value});
     }
-
+    
     const login = () => {
         fetch(SERVER_URL + 'login', {
             method: 'POST',
@@ -21,9 +21,7 @@ function Login(){
             body: JSON.stringify(user)
         })
         .then(response => {
-            console.log(response);
             const jwtToken = response.headers.get('Authorization');
-            console.log(jwtToken);
             if(jwtToken !== null){
                 sessionStorage.setItem("jwt", jwtToken);
                 setAuth(true);
@@ -31,16 +29,16 @@ function Login(){
         })
         .catch(err => console.error(err));
     }
-    
+
     if(isAuthenticated)
-        return <CarList />
+        return <CarList/>
     else{
-        return (
+    return(
         <div>
             <Stack spacing={2} alignItems='center' mt={2}>
-                <TextField name='username' label='Username' onChange={handleChange} />
-                <TextField type='password' name='password' label='Password' onChange={handleChange} />
-                <Button variant='outlined' color='primary' onClick={login}>Login</Button>
+                <TextField name="username" label='Username' onChange={handleChange}/>
+                <TextField type="password" name="password" label='Password' onChange={handleChange}/>
+                <Button variant="outlined" color='primary' onClick={login}>Login</Button>
             </Stack>
         </div>
     )

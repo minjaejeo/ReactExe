@@ -20,12 +20,11 @@ function CarList(){
     // 서버에 car 목록 요청 함수
     const fetchCars = () => {
 
-        // 세션스토리지로부터 token을 가져온다.
+        // 세션 스토리지로부터 token을 가져온다.
         const token = sessionStorage.getItem("jwt");
 
-
         fetch(SERVER_URL + 'api/cars', {
-            headers : {'Authorization' : token}
+            headers: {'Authorization': token}
         })
         // respose는 헤더+json을 가진 js객체
         // response.json()는 json만 가진 js객체
@@ -40,8 +39,8 @@ function CarList(){
         if(window.confirm('Are you sure to delete?')){
 
             const token = sessionStorage.getItem("jwt");
-
-            fetch(url, {method: 'DELETE', 
+            fetch(url, {
+                method: 'DELETE',
                 headers: {'Authorization': token}
             })
             .then(response => {
@@ -59,14 +58,13 @@ function CarList(){
 
     // car객체 서버로 추가 요청 함수
     const addCar = (car) => {
-
         const token = sessionStorage.getItem("jwt");
-
         fetch(SERVER_URL + 'api/cars',
             {
                 method: 'POST',
-                headers: {'Content-Type':'application/json',
-                'Authorization': token
+                headers: {
+                    'Content-Type':'application/json',
+                    'Authorization': token
                 },
                 body: JSON.stringify(car)
             }
@@ -92,8 +90,10 @@ function CarList(){
         fetch(link,
             {
                 method: 'PUT',
-                headers: {'Content-Type':'application/json',
-                    'Authorization': token
+                headers: {
+                    'Content-Type':'application/json',
+                    'Authorization' : token
+                    
                 },
                 body: JSON.stringify(car)
             }

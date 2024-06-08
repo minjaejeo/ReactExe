@@ -1,19 +1,18 @@
 import React, {useState} from "react";
 import { SERVER_URL } from './constants';
-import { Button, TextField, Stack } from "@mui/material";
-
+import { Button, TextField, Stack } from '@mui/material';
 
 function Login(){
-    const [ user, setUser ] = useState({
+    const [user, setUser] = useState({
         username: '',
         password: ''
     });
-    const [isAuthenticated, setAuth ] = useState(false);
+    const [isAuthenticated, setAuth] = useState(false);
 
     const handleChange = (event) => {
         setUser({...user, [event.target.name]: event.target.value});
     }
-
+    
     const login = () => {
         fetch(SERVER_URL + 'login', {
             method: 'POST',
@@ -26,16 +25,15 @@ function Login(){
                 sessionStorage.setItem("jwt", jwtToken);
                 setAuth(true);
             }
-        }) 
+        })
         .catch(err => console.error(err));
     }
-
     return(
         <div>
             <Stack spacing={2} alignItems='center' mt={2}>
-                <TextField name="username" label='Username' onChange={null}/>
-                <TextField type="password" name="password" label='Password' onChange={null}/>
-                <Button variant="outlined" color="primary" onClick={login}>Login</Button>
+                <TextField name="username" label='Username' onChange={handleChange}/>
+                <TextField type="password" name="password" label='Password' onChange={handleChange}/>
+                <Button variant="outlined" color='primary' onClick={login}>Login</Button>
             </Stack>
         </div>
     )
